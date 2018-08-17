@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CRV.CoreComponent.UnitTesting
 {
     [TestClass]
-    public class TimeUtilTest
+    public class TimeUtilsTest
     {
         [TestMethod]
         public void ConvertDateTimeToFractionMinutes()
@@ -12,7 +12,7 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment            
 
             // act
-            var result = TimeUtil.ConvertDateTimeToFractionMinutes(DateTime.Parse("0:2:30"));
+            var result = TimeUtils.ConvertDateTimeToFractionMinutes(DateTime.Parse("0:2:30"));
 
             // assert
             Assert.IsTrue(result == 2.5);
@@ -24,7 +24,7 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment            
 
             // act
-            var result = TimeUtil.ConvertDateTimeToFractionHours(DateTime.Parse("1:15:00"));
+            var result = TimeUtils.ConvertDateTimeToFractionHours(DateTime.Parse("1:15:00"));
 
             // assert
             Assert.IsTrue(result == 1.25);
@@ -36,11 +36,24 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment            
 
             // act
-            var resultInMinutes = TimeUtil.ConvertFractionHoursToMinutes(1.25);
+            var resultInMinutes = TimeUtils.ConvertFractionHoursToMinutes(1.25);
 
             // assert
             Assert.IsTrue(resultInMinutes == 75);
         }
+
+        [TestMethod]
+        public void DecimalDivisionRound()
+        {
+            // arragment
+
+            // act
+            var result = TimeUtils.DecimalDivisionRound(8, 3);
+
+            // assert
+            Assert.IsTrue(result == 2.7);
+        }
+
     }
 
 }

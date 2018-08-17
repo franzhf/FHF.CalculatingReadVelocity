@@ -55,7 +55,7 @@ namespace CRV.CoreComponent
         public double GetFractionFormat()
         {
             if(_fractionFormat == -1)
-                _fractionFormat = TimeUtil.ConvertDateTimeToFractionMinutes(new DateTime(1, 1, 1, Hour, Minute, Second));
+                _fractionFormat = TimeUtils.ConvertDateTimeToFractionMinutes(new DateTime(1, 1, 1, Hour, Minute, Second));
             return _fractionFormat;
         }
     }

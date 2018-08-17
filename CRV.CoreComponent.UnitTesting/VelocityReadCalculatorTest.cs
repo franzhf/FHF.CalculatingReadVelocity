@@ -135,5 +135,45 @@ namespace CRV.CoreComponent.UnitTesting
             //assert
             Assert.IsTrue(pomodoroRequiredResult == 2.15);
         }
+
+        [TestMethod]
+        public void GetSessionRequiredToRead_totalpomodorosInIntegers()
+        {
+            // arragment
+
+            var velocityCalculator = new VelocityReadCalculator(_book, _pomodoroSettings, _timeSettings);
+
+            // act
+            var sessionRequiredResult_2p = velocityCalculator.GetSessionRequired(2);
+            var sessionRequiredResult_8p = velocityCalculator.GetSessionRequired(8);
+
+            // 1 session -->  3p minutes
+            // if the pomodoros is 2 , it will be return 0 --> (total pomodoros/ pomodoros per session)
+            // if the pomodoros is 8 , it will be return 2.7 --> (8 / 3)            
+
+            //assert
+            Assert.IsTrue(sessionRequiredResult_2p == 0);
+            Assert.IsTrue(sessionRequiredResult_8p == 2.5);
+        }
+
+        [TestMethod]
+        public void GetSessionRequiredToRead_totalpomodorosDecimals()
+        {
+            // arragment
+            var velocityCalculator = new VelocityReadCalculator(_book, _pomodoroSettings, _timeSettings);
+
+            // act
+            var sessionRequiredResult_3_5p = velocityCalculator.GetSessionRequired(3.5);
+            var sessionRequiredResult_2_5p = velocityCalculator.GetSessionRequired(2.5);
+
+            // 1 session -->  3p minutes
+            // if the pomodoros is 3.5 , it will be return 1.2 --> (total pomodoros/ pomodoros per session)
+            // if the pomodoros is 2.5 , it will be return 0 --> (2.5 / 3)   
+
+            //assert
+            Assert.IsTrue(sessionRequiredResult_3_5p == 1.2);
+            Assert.IsTrue(sessionRequiredResult_2_5p == 0);
+        }
+
     }
 }

@@ -12,24 +12,17 @@ namespace CRV.CoreComponent
 
         public VelocityReadCalculator(Book book, PomodoroSettings pomodoroSettings, TimeSettings timeSettings)
         {
-            this._book = book;
-            this._pomodoroSettings = pomodoroSettings;
-            this._timeSettings = timeSettings;
+            this._book = book ?? throw new NullReferenceException($"book should not be null");
+            this._pomodoroSettings = pomodoroSettings ?? throw new NullReferenceException($"PomodoroSettings should not be null");
+            this._timeSettings = timeSettings ?? throw new NullReferenceException($"timeSettings should not be null");
             ReadAll = true;
-
-
-        }
-
-        public VelocityReadCalculator()
-        {
-
         }
 
         public VelocityRequired Execute()
         {
             var timeRequired = GetTimeRequiredToRead();
             var pomodoroRequired = GetPomodoroRequired(timeRequired);
-            var sessionRequired = GetSessionRequired();            
+            var sessionRequired = GetSessionRequired(pomodoroRequired);            
             var velocityRequired = new VelocityRequired(timeRequired, sessionRequired, pomodoroRequired);            
 
             return velocityRequired;
@@ -37,16 +30,17 @@ namespace CRV.CoreComponent
 
         public double GetPomodoroRequired(TimeRequired timeRequired)
         {
-            int totalMinutes = TimeUtil.ConvertFractionHoursToMinutes(timeRequired.GetFractionFormat());
-            int totalPomodoros = totalMinutes / _pomodoroSettings.PomodoroDuration;
-            int rest = totalMinutes % _pomodoroSettings.PomodoroDuration;
-            return totalPomodoros + ((double)rest/100); // 100 get the decimal
+            int totalMinutes = TimeUtils.ConvertFractionHoursToMinutes(timeRequired.GetFractionFormat());            
+            double pomodoroInFraction = TimeUtils.DecimalDivisionRound(totalMinutes, _pomodoroSettings.PomodoroDuration);
+            return pomodoroInFraction;
         }
 
-        private int GetSessionRequired()
+        public double GetSessionRequired(double qtyOfRequiredPomodoros)
         {
-            throw new NotImplementedException();
+            double sessionInFraction = TimeUtils.DecimalDivisionRound(qtyOfRequiredPomodoros, (double)_pomodoroSettings.NumberPomodoroPerSession);
+            return sessionInFraction;
         }
+
 
         public TimeRequired GetTimeRequiredToRead()
         {

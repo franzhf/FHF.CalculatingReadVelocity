@@ -16,11 +16,11 @@ namespace CRV.CoreComponent
 
         public TimeRequired(int h, int m, int s)
         {
-            if (!TimeUtil.ValidateHour(h))
+            if (!TimeUtils.ValidateHour(h))
                 throw new TimeSettingsOutRangeException("Hour");
-            if (!TimeUtil.ValidateMinute(m))
+            if (!TimeUtils.ValidateMinute(m))
                 throw new TimeSettingsOutRangeException("Minute");
-            if (!TimeUtil.ValidateSecond(s))
+            if (!TimeUtils.ValidateSecond(s))
                 throw new TimeSettingsOutRangeException("Second");
             Hour = h;
             Minute = m;
@@ -28,9 +28,9 @@ namespace CRV.CoreComponent
 
             _DateTimeFormat = BuildDateTimeFormat();
             if (h == 0)
-                _FractionFormat = TimeUtil.ConvertDateTimeToFractionMinutes(_DateTimeFormat);
+                _FractionFormat = TimeUtils.ConvertDateTimeToFractionMinutes(_DateTimeFormat);
             else
-                _FractionFormat = TimeUtil.ConvertDateTimeToFractionHours(_DateTimeFormat);
+                _FractionFormat = TimeUtils.ConvertDateTimeToFractionHours(_DateTimeFormat);
         }
 
         public DateTime GetDateTimeFormat()

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRV.CoreComponent
 {
-    public static class TimeUtil
+    public static class TimeUtils
     {
         const int WHOLEPART = 60;
 
@@ -56,6 +56,21 @@ namespace CRV.CoreComponent
         public static bool ValidateSecond(int s)
         {
             return (s < 60 &&  s >= 0) ? true : false;
+        }
+
+        public static double RoundToOneDecimal(this double value)
+        {
+            Decimal dValue = Convert.ToDecimal(value);
+            return (double)Decimal.Round(dValue, 1);
+        }
+
+        public static double DecimalDivisionRound(double dividend, double divisor)
+        {
+            double quotient = dividend / divisor;
+            double remainder = dividend % divisor;
+            double result =  quotient + (remainder / 100);  // remainder: 2 =>  0.2
+
+            return result.RoundToOneDecimal();
         }
     }
 }
