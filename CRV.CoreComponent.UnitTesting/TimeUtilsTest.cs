@@ -43,7 +43,7 @@ namespace CRV.CoreComponent.UnitTesting
         }
 
         [TestMethod]
-        public void DecimalDivisionRound()
+        public void DecimalDivisionRound_Expect_Bigger_than_Zero()
         {
             // arragment
 
@@ -54,6 +54,18 @@ namespace CRV.CoreComponent.UnitTesting
             Assert.IsTrue(result == 2.7);
         }
 
+
+        [TestMethod]
+        public void DecimalDivisionRound_Expect_Zero()
+        {
+            // arragment
+
+            // act
+            var result = TimeUtils.DecimalDivisionRound(2.5, 3);
+
+            // assert
+            Assert.IsTrue(result == 0);
+        }
     }
 
 }

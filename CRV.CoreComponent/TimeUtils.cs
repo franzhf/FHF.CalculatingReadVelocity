@@ -66,7 +66,10 @@ namespace CRV.CoreComponent
 
         public static double DecimalDivisionRound(double dividend, double divisor)
         {
-            double quotient = dividend / divisor;
+            if (divisor > 0 && dividend < divisor)
+                return 0;
+
+            double quotient = dividend / divisor;            
             double remainder = dividend % divisor;
             double result =  quotient + (remainder / 100);  // remainder: 2 =>  0.2
 

@@ -37,7 +37,7 @@ namespace CRV.CoreComponent.UnitTesting
         }
 
         [TestMethod]
-        public void CalculateReadVelocity()
+        public void CalculateReadVelocity_TimeRequired()
         {
             // Arrange : precondition of test             
             var velocityCalculator = new VelocityReadCalculator(_book, _pomodoroSettings, _timeSettings);
@@ -46,8 +46,35 @@ namespace CRV.CoreComponent.UnitTesting
             var ResultVelocity = velocityCalculator.Execute();
 
             // assert: the assertion that the expected behavior occurred
-            Assert.IsTrue(ResultVelocity.TimeRequired.Minute == 15);
+            Assert.IsTrue(ResultVelocity.TimeRequired.Hour == 1);
+            Assert.IsTrue(ResultVelocity.TimeRequired.Minute == 0);
             Assert.IsTrue(ResultVelocity.TimeRequired.Second == 0);
+        }
+
+        [TestMethod]
+        public void CalculateReadVelocity_SessionRequired()
+        {
+            // Arrange : precondition of test             
+            var velocityCalculator = new VelocityReadCalculator(_book, _pomodoroSettings, _timeSettings);
+
+            // Act :  the performance of the act that is being tested
+            var ResultVelocity = velocityCalculator.Execute();
+
+            // assert: the assertion that the expected behavior occurred
+            Assert.IsTrue(ResultVelocity.SessionRequired == 0);           
+        }
+
+        [TestMethod]
+        public void CalculateReadVelocity_PomodorosRequired()
+        {
+            // Arrange : precondition of test             
+            var velocityCalculator = new VelocityReadCalculator(_book, _pomodoroSettings, _timeSettings);
+
+            // Act :  the performance of the act that is being tested
+            var ResultVelocity = velocityCalculator.Execute();
+
+            // assert: the assertion that the expected behavior occurred
+            Assert.IsTrue(ResultVelocity.PomodorsRequired == 2);
         }
 
         [TestMethod]
@@ -133,7 +160,7 @@ namespace CRV.CoreComponent.UnitTesting
             // the result should be 2.15 p hours
 
             //assert
-            Assert.IsTrue(pomodoroRequiredResult == 2.15);
+            Assert.IsTrue(pomodoroRequiredResult == 2.6);
         }
 
         [TestMethod]
@@ -153,7 +180,7 @@ namespace CRV.CoreComponent.UnitTesting
 
             //assert
             Assert.IsTrue(sessionRequiredResult_2p == 0);
-            Assert.IsTrue(sessionRequiredResult_8p == 2.5);
+            Assert.IsTrue(sessionRequiredResult_8p == 2.7);
         }
 
         [TestMethod]
