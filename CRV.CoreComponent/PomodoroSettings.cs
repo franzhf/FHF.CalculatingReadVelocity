@@ -5,6 +5,7 @@
         public PomodoroSettings()
         {
             IncludeRestAmongPomodoro = false;
+            
         }
 
         public TimeSettings SinglePageVelocity { get; set; }
