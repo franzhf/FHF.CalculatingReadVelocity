@@ -49,5 +49,12 @@ namespace CRV.CoreComponent
         {
             return _FractionFormat;
         }
+
+        public double GetTimeInMinutes()
+        {
+            int extractMinutesOfHours = Hour * 60;            
+            return extractMinutesOfHours + Minute;
+        }
+
     }
 }

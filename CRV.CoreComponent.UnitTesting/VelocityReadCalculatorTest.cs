@@ -125,7 +125,7 @@ namespace CRV.CoreComponent.UnitTesting
             // the result should be 1.25 hours
 
             //assert
-            Assert.IsTrue(timerRequiredResult.GetFractionFormat() == 1.25);
+            Assert.IsTrue(timerRequiredResult.GetFractionFormat() == 1.2);
         }
 
         [TestMethod]
@@ -160,7 +160,7 @@ namespace CRV.CoreComponent.UnitTesting
             // the result should be 2.15 p hours
 
             //assert
-            Assert.IsTrue(pomodoroRequiredResult == 2.6);
+            Assert.IsTrue(pomodoroRequiredResult == 2.5);
         }
 
         [TestMethod]

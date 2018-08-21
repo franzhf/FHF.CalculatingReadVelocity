@@ -27,7 +27,7 @@ namespace CRV.CoreComponent.UnitTesting
             var result = TimeUtils.ConvertDateTimeToFractionHours(DateTime.Parse("1:15:00"));
 
             // assert
-            Assert.IsTrue(result == 1.25);
+            Assert.IsTrue(result == 1.2);
         }
 
         [TestMethod]

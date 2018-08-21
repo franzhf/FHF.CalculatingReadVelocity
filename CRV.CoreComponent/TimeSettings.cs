@@ -58,5 +58,11 @@ namespace CRV.CoreComponent
                 _fractionFormat = TimeUtils.ConvertDateTimeToFractionMinutes(new DateTime(1, 1, 1, Hour, Minute, Second));
             return _fractionFormat;
         }
+
+        public string GetVelocityTimeString()
+        {
+            return $"{Minute}:{Second}";
+        }
+        
     }
 }

@@ -1,1 +1,1 @@
-each diagram is being building in "draw.io"
+For opening the diagrams need draw.io app

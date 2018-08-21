@@ -15,5 +15,6 @@
 
         public bool IncludeRestAmongPomodoro { get;private set; }
         
+        
     }
 }

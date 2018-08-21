@@ -17,7 +17,7 @@ namespace CRV.CoreComponent
         {
             double fractionPartOfSecond = (double)inputTime.Second / (double)WHOLEPART;
             double totalMinutesPlusFractionSec = (double)inputTime.Minute + fractionPartOfSecond;
-            return totalMinutesPlusFractionSec;
+            return totalMinutesPlusFractionSec.RoundToOneDecimal();
         }
         
         /// <summary>
@@ -29,7 +29,7 @@ namespace CRV.CoreComponent
         {
             double fractionPartMinute = (double)inputTime.Minute / (double)WHOLEPART;
             double totalHourPlusFractionMin = (double)inputTime.Hour + fractionPartMinute;
-            return totalHourPlusFractionMin;
+            return totalHourPlusFractionMin.RoundToOneDecimal();
         }
 
         /// <summary>
