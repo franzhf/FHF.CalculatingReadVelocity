@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CRV.CoreComponent
 {
+    [Obsolete("This class is deprecated")]
     public class VelocityRequired
     {
         public double SessionRequired { get; }

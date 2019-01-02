@@ -14,7 +14,7 @@ namespace CRV.CoreComponent.UnitTesting
         public void MinuteSet_ShouldBeThrownAnExceptionNumberOutOfTheRange()
         {
             // arragment
-            var timeSettings = new TimeSettings();
+            var timeSettings = new TimeFormat();
             int number1 = 70;
             int number2 = -1;
             // act
@@ -30,7 +30,7 @@ namespace CRV.CoreComponent.UnitTesting
         public void SecondSet_ShouldBeThrownAnExceptionNumberOutOfTheRange()
         {
             // arragment
-            var timeSettings = new TimeSettings();
+            var timeSettings = new TimeFormat();
             int number1 = 70;
             int number2 = -1;
 
@@ -44,7 +44,7 @@ namespace CRV.CoreComponent.UnitTesting
         public void SecondSet()
         {
             // arragment
-            var timeSettings = new TimeSettings();
+            var timeSettings = new TimeFormat();
             int number = 59;
 
             // act

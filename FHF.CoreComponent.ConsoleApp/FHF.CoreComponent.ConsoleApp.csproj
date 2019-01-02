@@ -6,7 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CRV.CoreComponent\CRV.CoreComponent.csproj" />
+    <ProjectReference Include="..\TrackerActivity.DataAccess\TrackerActivity.DataAccess.csproj" />
+    <ProjectReference Include="..\TrackerActivity.ManageRunningActivity\TrackerActivity.ManageRunningActivity.csproj" />
+    <ProjectReference Include="..\TrackerActivity.ReadingActivity\TrackerActivity.ReadingActivity.csproj" />
+    <ProjectReference Include="..\TrackerActivity.Toolkit\TrackerActivity.Toolkit.csproj" />
   </ItemGroup>
 
 </Project>

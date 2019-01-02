@@ -8,7 +8,7 @@ namespace CRV.CoreComponent.UnitTesting
     {
         Book _book;
         PomodoroSettings _pomodoroSettings;
-        TimeSettings _timeSettings;
+        TimeFormat _timeSettings;
 
         public VelocityReadCalculatorTest()
         {
@@ -20,7 +20,7 @@ namespace CRV.CoreComponent.UnitTesting
                 Author = "Robert C Martin"
             };
 
-            _timeSettings = new TimeSettings()
+            _timeSettings = new TimeFormat()
             {
                 Hour = 0,
                 Minute = 2,

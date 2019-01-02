@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CRV.CoreComponent
 {
+    [Obsolete("TimeRequired class is deprecated, use TimeFormat class instead.")]
     public class TimeRequired
     {
         public int Minute { get; private set; }

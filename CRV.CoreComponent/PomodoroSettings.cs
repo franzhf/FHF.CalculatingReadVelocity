@@ -8,7 +8,7 @@
             
         }
 
-        public TimeSettings SinglePageVelocity { get; set; }
+        public TimeFormat SinglePageVelocity { get; set; }
         public int PomodoroDuration { get; set; }
         public int NumberPomodoroPerSession { get; set; }
         public int RestAmongPomodoro { get; set; }

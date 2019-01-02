@@ -6,12 +6,12 @@ namespace CRV.CoreComponent
     {
         public Book Book { get; private set; }
         public PomodoroSettings PomodoroSettings { get; private set; }
-        public TimeSettings TimeSettings { get; private set; }
+        public TimeFormat TimeSettings { get; private set; }
         public bool ReadAll { get; set; }
         
 
 
-        public VelocityReadCalculator(Book book, PomodoroSettings pomodoroSettings, TimeSettings timeSettings)
+        public VelocityReadCalculator(Book book, PomodoroSettings pomodoroSettings, TimeFormat timeSettings)
         {
             Book = book ?? throw new NullReferenceException($"book should not be null");
             PomodoroSettings = pomodoroSettings ?? throw new NullReferenceException($"PomodoroSettings should not be null");

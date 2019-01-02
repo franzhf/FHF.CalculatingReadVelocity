@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CRV.CoreComponent
 {
-    public class TimeSettings
+    public class TimeFormat
     {
         private int _minute = -1;
         private int _second = -1;
@@ -23,9 +23,22 @@ namespace CRV.CoreComponent
         }
 
 
-        public TimeSettings()
+        public TimeFormat()
         {
             _fractionFormat = -1;
+        }
+
+        public TimeFormat(int h, int m, int s)
+        {
+            Hour = h;
+            Minute = m;
+            Second = s;
+
+            _dateTimeFormat = BuildDateTimeFormat();
+            if (h == 0)
+                _fractionFormat = TimeUtils.ConvertDateTimeToFractionMinutes(_dateTimeFormat);
+            else
+                _fractionFormat = TimeUtils.ConvertDateTimeToFractionHours(_dateTimeFormat);
         }
 
         public int Hour { get; set; }
@@ -63,6 +76,18 @@ namespace CRV.CoreComponent
         {
             return $"{Minute}:{Second}";
         }
-        
+
+        public double GetTimeInMinutes()
+        {
+            int extractMinutesOfHours = Hour * 60;
+            return extractMinutesOfHours + Minute;
+        }
+
+        private DateTime BuildDateTimeFormat()
+        {
+            var date = DateTime.Now;
+
+            return new DateTime(date.Year, date.Month, date.Day, Hour, Minute, Second);
+        }
     }
 }
