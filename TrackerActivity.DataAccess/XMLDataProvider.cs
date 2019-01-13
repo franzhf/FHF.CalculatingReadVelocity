@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using CRV.CoreComponent;
 using TrackerActivity.ManageRunningActivity;
 using System.Xml.Serialization;
 

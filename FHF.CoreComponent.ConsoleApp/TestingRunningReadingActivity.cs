@@ -1,9 +1,9 @@
 ﻿using System;
-using CRV.CoreComponent;
 using TrackerActivity.Toolkit;
 using TrackerActivity.ManageRunningActivity;
 using System.Diagnostics;
-using TrackerActivity.DataAccess; 
+using TrackerActivity.DataAccess;
+using TrackerActivity.Domain.Activity;
 
 namespace FHF.CoreComponent.ConsoleApp
 {

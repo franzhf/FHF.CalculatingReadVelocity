@@ -1,7 +1,11 @@
 ﻿using System;
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Domain.ReadingActivity;
+using TrackerActivity.Toolkit;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Application.Core
 {
+    [Obsolete("VelocityReadCalculator class is deprecated, use ReadingActivity instead of.")]
     public class VelocityReadCalculator
     {
         public Book Book { get; private set; }
@@ -31,14 +35,14 @@ namespace CRV.CoreComponent
 
         public double GetPomodoroRequired(TimeRequired timeRequired)
         {
-            int totalMinutes = TimeUtils.ConvertFractionHoursToMinutes(timeRequired.GetFractionFormat());            
-            double pomodoroInFraction = TimeUtils.DecimalDivisionRound(totalMinutes, PomodoroSettings.PomodoroDuration);
+            int totalMinutes = FormatTimeUtility.ConvertFractionHoursToMinutes(timeRequired.GetFractionFormat());            
+            double pomodoroInFraction = FormatTimeUtility.DecimalDivisionRound(totalMinutes, PomodoroSettings.PomodoroDuration);
             return pomodoroInFraction;
         }
 
         public double GetSessionRequired(double qtyOfRequiredPomodoros)
         {
-            double sessionInFraction = TimeUtils.DecimalDivisionRound(qtyOfRequiredPomodoros, (double)PomodoroSettings.NumberPomodoroPerSession);
+            double sessionInFraction = FormatTimeUtility.DecimalDivisionRound(qtyOfRequiredPomodoros, (double)PomodoroSettings.NumberPomodoroPerSession);
             return sessionInFraction;
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Application.Core
 {
     public class DemadTimeResult
     {

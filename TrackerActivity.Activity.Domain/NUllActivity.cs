@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Domain.Activity
 {
     // The null object pattern
     // Its purpose is to allow you to avoid throwing a NullReference-Exception 

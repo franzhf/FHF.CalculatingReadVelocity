@@ -1,9 +1,11 @@
 ﻿using System;
-using CRV.CoreComponent;
 using TrackerActivity.Toolkit;
 using TrackerActivity.ManageRunningActivity;
 using System.Diagnostics;
-using System.IO;
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Application.Core;
+using TrackerActivity.Domain.ReadingActivity;
+
 namespace FHF.CoreComponent.ConsoleApp
 {
     class Program

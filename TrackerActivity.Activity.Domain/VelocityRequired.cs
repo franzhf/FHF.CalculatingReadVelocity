@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Domain.Activity
 {
     [Obsolete("This class is deprecated")]
     public class VelocityRequired

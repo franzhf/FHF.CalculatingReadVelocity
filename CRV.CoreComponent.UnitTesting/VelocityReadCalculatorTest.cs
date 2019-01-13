@@ -1,5 +1,8 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Domain.ReadingActivity;
+using TrackerActivity.Application.Core;
 
 namespace CRV.CoreComponent.UnitTesting
 {

@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using TrackerActivity.Toolkit;
 namespace CRV.CoreComponent.UnitTesting
 {
     [TestClass]
-    public class TimeUtilsTest
+    public class FormatTimeUtilityTest
     {
         [TestMethod]
         public void ConvertDateTimeToFractionMinutes()
@@ -12,7 +12,7 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment            
 
             // act
-            var result = TimeUtils.ConvertDateTimeToFractionMinutes(DateTime.Parse("0:2:30"));
+            var result = FormatTimeUtility.ConvertDateTimeToFractionMinutes(DateTime.Parse("0:2:30"));
 
             // assert
             Assert.IsTrue(result == 2.5);
@@ -24,7 +24,7 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment            
 
             // act
-            var result = TimeUtils.ConvertDateTimeToFractionHours(DateTime.Parse("1:15:00"));
+            var result = FormatTimeUtility.ConvertDateTimeToFractionHours(DateTime.Parse("1:15:00"));
 
             // assert
             Assert.IsTrue(result == 1.2);
@@ -36,7 +36,7 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment            
 
             // act
-            var resultInMinutes = TimeUtils.ConvertFractionHoursToMinutes(1.25);
+            var resultInMinutes = FormatTimeUtility.ConvertFractionHoursToMinutes(1.25);
 
             // assert
             Assert.IsTrue(resultInMinutes == 75);
@@ -48,7 +48,7 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment
 
             // act
-            var result = TimeUtils.DecimalDivisionRound(8, 3);
+            var result = FormatTimeUtility.DecimalDivisionRound(8, 3);
 
             // assert
             Assert.IsTrue(result == 2.7);
@@ -61,7 +61,7 @@ namespace CRV.CoreComponent.UnitTesting
             // arragment
 
             // act
-            var result = TimeUtils.DecimalDivisionRound(2.5, 3);
+            var result = FormatTimeUtility.DecimalDivisionRound(2.5, 3);
 
             // assert
             Assert.IsTrue(result == 0);

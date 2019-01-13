@@ -1,5 +1,7 @@
 ﻿using System;
-namespace CRV.CoreComponent
+using TrackerActivity.Toolkit;
+
+namespace TrackerActivity.Domain.Activity
 {
     public class TimeFormat
     {
@@ -22,7 +24,6 @@ namespace CRV.CoreComponent
             }
         }
 
-
         public TimeFormat()
         {
             _fractionFormat = -1;
@@ -36,9 +37,9 @@ namespace CRV.CoreComponent
 
             _dateTimeFormat = BuildDateTimeFormat();
             if (h == 0)
-                _fractionFormat = TimeUtils.ConvertDateTimeToFractionMinutes(_dateTimeFormat);
+                _fractionFormat = FormatTimeUtility.ConvertDateTimeToFractionMinutes(_dateTimeFormat);
             else
-                _fractionFormat = TimeUtils.ConvertDateTimeToFractionHours(_dateTimeFormat);
+                _fractionFormat = FormatTimeUtility.ConvertDateTimeToFractionHours(_dateTimeFormat);
         }
 
         public int Hour { get; set; }
@@ -68,7 +69,7 @@ namespace CRV.CoreComponent
         public double GetFractionFormat()
         {
             if(_fractionFormat == -1)
-                _fractionFormat = TimeUtils.ConvertDateTimeToFractionMinutes(new DateTime(1, 1, 1, Hour, Minute, Second));
+                _fractionFormat = FormatTimeUtility.ConvertDateTimeToFractionMinutes(new DateTime(1, 1, 1, Hour, Minute, Second));
             return _fractionFormat;
         }
 

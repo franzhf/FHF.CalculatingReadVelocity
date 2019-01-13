@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRV.CoreComponent", "CRV.CoreComponent\CRV.CoreComponent.csproj", "{192D7361-CDAB-452C-AC01-E9BD95981087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.Application.Core", "CRV.CoreComponent\TrackerActivity.Application.Core.csproj", "{192D7361-CDAB-452C-AC01-E9BD95981087}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRV.CoreComponent.UnitTesting", "CRV.CoreComponent.UnitTesting\CRV.CoreComponent.UnitTesting.csproj", "{B10D78E0-8858-4126-9DDB-108D8B7E871A}"
 EndProject
@@ -19,13 +19,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.ManageRunni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.DataAccess", "TrackerActivity.DataAccess\TrackerActivity.DataAccess.csproj", "{975F23AB-E767-47C9-BE87-0CF2223DE077}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerActivity.UI.ASPNETCore", "TrackerActivity.UI.ASPNETCore\TrackerActivity.UI.ASPNETCore.csproj", "{24CFEB35-6688-4AED-BA7F-E529460A2FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.UI.ASPNETCore", "TrackerActivity.UI.ASPNETCore\TrackerActivity.UI.ASPNETCore.csproj", "{24CFEB35-6688-4AED-BA7F-E529460A2FAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainLayer", "DomainLayer", "{642C6FF6-532D-41F9-B954-646956A72E69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerActivity.ReadingActivity.Domain", "TrackerActivity.ReadingActivity.Domain\TrackerActivity.ReadingActivity.Domain.csproj", "{1A6DA274-C17C-43FB-A423-3255FE5EB823}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.Domain.ReadingActivity", "TrackerActivity.ReadingActivity.Domain\TrackerActivity.Domain.ReadingActivity.csproj", "{1A6DA274-C17C-43FB-A423-3255FE5EB823}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerActivity.Activity.Domain", "TrackerActivity.Activity.Domain\TrackerActivity.Activity.Domain.csproj", "{01483F61-3FC1-43E3-BE8C-AB96C106771A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.Domain.Activity", "TrackerActivity.Activity.Domain\TrackerActivity.Domain.Activity.csproj", "{01483F61-3FC1-43E3-BE8C-AB96C106771A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationLayer", "ApplicationLayer", "{F0F29DDE-3996-40F4-A48C-EAFE2F5A28AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{77172E94-7301-4108-9D4F-275B88AEC2E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{BF62B221-9FB0-49E2-A422-BC875072B869}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingActivity.Application.Services", "TrackingActivity.Application.Services\TrackingActivity.Application.Services.csproj", "{CEB3DD52-8A5E-4EE8-AD98-7D12D7FC087F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfrastructureLayer", "InfrastructureLayer", "{12B9FEE7-C4CA-4295-B2A7-337F7601F814}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.Infrastructure.Repositories", "TrackerActivity.Infrastructure.Repositories\TrackerActivity.Infrastructure.Repositories.csproj", "{C881F828-8489-4A9A-936C-092875DE41EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityManager.Infrastructure.UnitTesting", "ActivityManager.Infrastructure.UnitTesting\ActivityManager.Infrastructure.UnitTesting.csproj", "{33616398-047B-49C2-BBC8-304BE102C266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,13 +91,33 @@ Global
 		{01483F61-3FC1-43E3-BE8C-AB96C106771A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01483F61-3FC1-43E3-BE8C-AB96C106771A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01483F61-3FC1-43E3-BE8C-AB96C106771A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB3DD52-8A5E-4EE8-AD98-7D12D7FC087F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB3DD52-8A5E-4EE8-AD98-7D12D7FC087F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB3DD52-8A5E-4EE8-AD98-7D12D7FC087F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB3DD52-8A5E-4EE8-AD98-7D12D7FC087F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C881F828-8489-4A9A-936C-092875DE41EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C881F828-8489-4A9A-936C-092875DE41EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C881F828-8489-4A9A-936C-092875DE41EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C881F828-8489-4A9A-936C-092875DE41EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33616398-047B-49C2-BBC8-304BE102C266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33616398-047B-49C2-BBC8-304BE102C266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33616398-047B-49C2-BBC8-304BE102C266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33616398-047B-49C2-BBC8-304BE102C266}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{192D7361-CDAB-452C-AC01-E9BD95981087} = {F0F29DDE-3996-40F4-A48C-EAFE2F5A28AB}
+		{B10D78E0-8858-4126-9DDB-108D8B7E871A} = {BF62B221-9FB0-49E2-A422-BC875072B869}
+		{0AB74B44-8460-4964-824B-91570B8688AB} = {77172E94-7301-4108-9D4F-275B88AEC2E1}
+		{975F23AB-E767-47C9-BE87-0CF2223DE077} = {12B9FEE7-C4CA-4295-B2A7-337F7601F814}
+		{24CFEB35-6688-4AED-BA7F-E529460A2FAC} = {77172E94-7301-4108-9D4F-275B88AEC2E1}
 		{1A6DA274-C17C-43FB-A423-3255FE5EB823} = {642C6FF6-532D-41F9-B954-646956A72E69}
 		{01483F61-3FC1-43E3-BE8C-AB96C106771A} = {642C6FF6-532D-41F9-B954-646956A72E69}
+		{CEB3DD52-8A5E-4EE8-AD98-7D12D7FC087F} = {F0F29DDE-3996-40F4-A48C-EAFE2F5A28AB}
+		{C881F828-8489-4A9A-936C-092875DE41EF} = {12B9FEE7-C4CA-4295-B2A7-337F7601F814}
+		{33616398-047B-49C2-BBC8-304BE102C266} = {BF62B221-9FB0-49E2-A422-BC875072B869}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {226D4E64-060C-4602-9487-CACA5B14F195}

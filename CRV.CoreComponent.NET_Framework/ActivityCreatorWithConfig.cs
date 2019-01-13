@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
-using CRV.CoreComponent;
 
 namespace CRV.CoreComponent.NET_Framework
 {

@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CRV.CoreComponent\CRV.CoreComponent.csproj">
+    <ProjectReference Include="..\CRV.CoreComponent\TrackerActivity.Application.Core.csproj">
       <Project>{192d7361-cdab-452c-ac01-e9bd95981087}</Project>
-      <Name>CRV.CoreComponent</Name>
+      <Name>TrackerActivity.Application.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Application.Core;
 
 namespace TrackerActivity.UI.ASPNETCore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ReadingAcitvityController : ControllerBase
+    public class AcitvityController : ControllerBase
     {
         // GET: api/ReadingAcitvity
         [HttpGet]
@@ -27,8 +29,9 @@ namespace TrackerActivity.UI.ASPNETCore.Controllers
 
         // POST: api/ReadingAcitvity
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] IActivity  activity)
         {
+
         }
 
         // PUT: api/ReadingAcitvity/5

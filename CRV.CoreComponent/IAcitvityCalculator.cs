@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TrackerActivity.Domain.Activity;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Application.Core
 {
     public interface IAcitvityCalculator
     {

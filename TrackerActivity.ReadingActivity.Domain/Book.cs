@@ -1,6 +1,8 @@
-﻿namespace CRV.CoreComponent
+﻿using System;
+using TrackerActivity.Domain.Activity;
+namespace TrackerActivity.Domain.ReadingActivity
 {
-    public class Book
+    public class Book:Entity
     {
         public string Title { get; set; }
         public int Pages { get; set; }
@@ -10,7 +12,6 @@
         public Book()
         {
         }
-
         
     }
 }

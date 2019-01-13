@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TrackerActivity.Toolkit;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Domain.Activity
 {
     [Obsolete("TimeRequired class is deprecated, use TimeFormat class instead.")]
     public class TimeRequired
@@ -17,11 +18,11 @@ namespace CRV.CoreComponent
 
         public TimeRequired(int h, int m, int s)
         {
-            if (!TimeUtils.ValidateHour(h))
+            if (!FormatTimeUtility.ValidateHour(h))
                 throw new TimeSettingsOutRangeException("Hour");
-            if (!TimeUtils.ValidateMinute(m))
+            if (!FormatTimeUtility.ValidateMinute(m))
                 throw new TimeSettingsOutRangeException("Minute");
-            if (!TimeUtils.ValidateSecond(s))
+            if (!FormatTimeUtility.ValidateSecond(s))
                 throw new TimeSettingsOutRangeException("Second");
             Hour = h;
             Minute = m;
@@ -29,9 +30,9 @@ namespace CRV.CoreComponent
 
             _DateTimeFormat = BuildDateTimeFormat();
             if (h == 0)
-                _FractionFormat = TimeUtils.ConvertDateTimeToFractionMinutes(_DateTimeFormat);
+                _FractionFormat = FormatTimeUtility.ConvertDateTimeToFractionMinutes(_DateTimeFormat);
             else
-                _FractionFormat = TimeUtils.ConvertDateTimeToFractionHours(_DateTimeFormat);
+                _FractionFormat = FormatTimeUtility.ConvertDateTimeToFractionHours(_DateTimeFormat);
         }
 
         public DateTime GetDateTimeFormat()

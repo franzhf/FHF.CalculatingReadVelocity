@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using TrackerActivity.Toolkit;
-namespace CRV.CoreComponent
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Domain.ReadingActivity;
+
+namespace TrackerActivity.Application.Core
 {
     // Concrete class is responsable to create one or more concrete activities
     public class ActivityCreator : IActivityCreator

@@ -4,6 +4,8 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Configuration;
 using TrackerActivity.Toolkit;
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Application.Core;
 
 namespace CRV.CoreComponent.UnitTesting
 {

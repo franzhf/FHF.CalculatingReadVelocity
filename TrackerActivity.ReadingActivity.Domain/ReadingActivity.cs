@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
-
-
-namespace CRV.CoreComponent
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Toolkit;
+namespace TrackerActivity.Domain.ReadingActivity
 {
     [Serializable]
-    public class ReadingActivity : IActivity
-    {
-        
+    public class ReadingActivity : Entity, IActivity
+    { 
         public Book Book { get; }
         public string Name { get; set; }
-        public Guid ID { get ; }
+        
         public Session DemandSession { get; }
         public Session SessionSettings { get; set; }
         public int demandOfSessions { get; set; }
         public TimeFormat SinglePageVelocity { get; set; }
+        public Guid ID { get; set; }
 
         public ReadingActivity()// we cannot create this activity wihtout a book
             // how is suppose we can create an instance of this activity
@@ -48,14 +48,14 @@ namespace CRV.CoreComponent
 
         public double GetPomodoroRequired(TimeFormat timeRequired)
         {
-            int totalMinutes = TimeUtils.ConvertFractionHoursToMinutes(timeRequired.GetFractionFormat());
-            double pomodoroInFraction = TimeUtils.DecimalDivisionRound(totalMinutes, SessionSettings.Pomodoro.PomodoroDuration);
+            int totalMinutes = FormatTimeUtility.ConvertFractionHoursToMinutes(timeRequired.GetFractionFormat());
+            double pomodoroInFraction = FormatTimeUtility.DecimalDivisionRound(totalMinutes, SessionSettings.Pomodoro.PomodoroDuration);
             return pomodoroInFraction;
         }
 
         public double GetSessionRequired(double qtyOfRequiredPomodoros)
         {
-            double sessionInFraction = TimeUtils.DecimalDivisionRound(qtyOfRequiredPomodoros, (double)SessionSettings.NumberOfPomodoros);
+            double sessionInFraction = FormatTimeUtility.DecimalDivisionRound(qtyOfRequiredPomodoros, (double)SessionSettings.NumberOfPomodoros);
             return sessionInFraction;
         }
 

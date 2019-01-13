@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CRV.CoreComponent\CRV.CoreComponent.csproj" />
+    <ProjectReference Include="..\CRV.CoreComponent\TrackerActivity.Application.Core.csproj" />
     <ProjectReference Include="..\TrackerActivity.Toolkit\TrackerActivity.Toolkit.csproj" />
   </ItemGroup>
 

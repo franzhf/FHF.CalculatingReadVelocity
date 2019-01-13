@@ -1,12 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CRV.CoreComponent\TrackerActivity.Application.Core.csproj" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TrackerActivity.Activity.Domain\TrackerActivity.Domain.Activity.csproj" />
+    <ProjectReference Include="..\TrackerActivity.ReadingActivity.Domain\TrackerActivity.Domain.ReadingActivity.csproj" />
     <ProjectReference Include="..\TrackerActivity.Toolkit\TrackerActivity.Toolkit.csproj" />
   </ItemGroup>
 

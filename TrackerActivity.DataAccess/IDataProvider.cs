@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using CRV.CoreComponent;
 
 namespace TrackerActivity.DataAccess
 {

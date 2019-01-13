@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Text;
 using System.Linq;
-using CRV.CoreComponent;
-using TrackerActivity.Toolkit;
 using System.Threading;
+using TrackerActivity.Toolkit;
+
 namespace TrackerActivity.ManageRunningActivity
 {
     public class ActivityProcessor : IActivityProcessor

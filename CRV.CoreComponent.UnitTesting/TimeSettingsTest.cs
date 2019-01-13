@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using TrackerActivity.Domain.Activity;
 
 namespace CRV.CoreComponent.UnitTesting
 {

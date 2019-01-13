@@ -1,4 +1,4 @@
-﻿namespace CRV.CoreComponent
+﻿namespace TrackerActivity.Domain.Activity
 {
     public class PomodoroSettings
     {

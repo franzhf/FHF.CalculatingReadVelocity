@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CRV.CoreComponent\TrackerActivity.Application.Core.csproj" />
-    <ProjectReference Include="..\TrackerActivity.ManageRunningActivity\TrackerActivity.ManageRunningActivity.csproj" />
+    <ProjectReference Include="..\TrackerActivity.Activity.Domain\TrackerActivity.Domain.Activity.csproj" />
     <ProjectReference Include="..\TrackerActivity.ReadingActivity.Domain\TrackerActivity.Domain.ReadingActivity.csproj" />
   </ItemGroup>
 

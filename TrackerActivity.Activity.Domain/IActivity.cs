@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.Serialization;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Domain.Activity
 {
     public interface IActivity
     {
-        string Name { get; set; }
-        Guid ID { get; }
+        string Name { get; set; }        
         Session  DemandSession { get; } 
         Session SessionSettings { get; set; }
         int demandOfSessions { get; set; }

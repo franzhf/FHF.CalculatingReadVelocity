@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRV.CoreComponent
+namespace TrackerActivity.Toolkit
 {
-    public static class TimeUtils
+    public static class FormatTimeUtility
     {
         const int WHOLEPART = 60;
 

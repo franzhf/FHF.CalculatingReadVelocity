@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CRV.CoreComponent;
-using TrackerActivity.Toolkit;
 using System.Threading;
 using System.Xml.Serialization;
+using TrackerActivity.Domain.Activity;
+using TrackerActivity.Toolkit;
+
 
 namespace TrackerActivity.ManageRunningActivity
 {
@@ -17,7 +18,6 @@ namespace TrackerActivity.ManageRunningActivity
         [NonSerialized]
         public NotifyChange NotifyStopWatchChanges;
         private IActivity _activity;
-        public Guid ID { get; set; }
         public StateExecutableActivity State { get; set; }
 
         public TimeSpan ElapsedTime { get; set; }
@@ -33,8 +33,7 @@ namespace TrackerActivity.ManageRunningActivity
             set
             {
                 if (value == null)
-                    throw new Exception("Need to set up the activity object");
-                ID  = value.ID;
+                    throw new Exception("Need to set up the activity object");                
                 _activity = value;
             }
         }

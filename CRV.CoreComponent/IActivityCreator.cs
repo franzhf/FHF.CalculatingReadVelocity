@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using TrackerActivity.Toolkit;
-namespace CRV.CoreComponent
+using TrackerActivity.Domain.Activity;
+namespace TrackerActivity.Application.Core
 {
     public interface IActivityCreator
     {
