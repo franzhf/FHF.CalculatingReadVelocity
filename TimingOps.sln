@@ -39,7 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfrastructureLayer", "Infr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerActivity.Infrastructure.Repositories", "TrackerActivity.Infrastructure.Repositories\TrackerActivity.Infrastructure.Repositories.csproj", "{C881F828-8489-4A9A-936C-092875DE41EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityManager.Infrastructure.UnitTesting", "ActivityManager.Infrastructure.UnitTesting\ActivityManager.Infrastructure.UnitTesting.csproj", "{33616398-047B-49C2-BBC8-304BE102C266}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivityManager.Infrastructure.UnitTesting", "ActivityManager.Infrastructure.UnitTesting\ActivityManager.Infrastructure.UnitTesting.csproj", "{33616398-047B-49C2-BBC8-304BE102C266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
