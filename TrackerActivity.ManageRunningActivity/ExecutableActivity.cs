@@ -19,7 +19,7 @@ namespace TrackerActivity.ManageRunningActivity
         public NotifyChange NotifyStopWatchChanges;
         private IActivity _activity;
         public StateExecutableActivity State { get; set; }
-
+        public Guid ID { get; set; }
         public TimeSpan ElapsedTime { get; set; }
 
         [XmlIgnore]        
