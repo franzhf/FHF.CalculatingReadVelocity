@@ -125,7 +125,7 @@ namespace FHF.CoreComponent.ConsoleApp
                 Console.Clear();
                 Console.WriteLine("****** Enter how long it takes you to read a single page ****** ");
                 TimeFormat timeSettings = new TimeFormat();
-                Console.WriteLine("Hour: ");
+                Console.WriteLine("Hour: ");                      
                 timeSettings.Hour = Convert.ToInt16(Console.ReadLine());
                 Console.WriteLine("Minute: ");
                 timeSettings.Minute = Convert.ToInt16(Console.ReadLine());

@@ -8,6 +8,20 @@ namespace TrackerActivity.Toolkit
     {
         const int WHOLEPART = 60;
 
+
+        public static double ConvertDateTimeToFractionMinutes(string szInputTime)
+        {
+            if (string.IsNullOrEmpty(szInputTime))
+                throw new NullReferenceException("input time can't be null or empty!");
+            
+            if(DateTime.TryParse(szInputTime, out DateTime value))
+            {
+                return ConvertDateTimeToFractionMinutes(value);
+            }
+            throw new InvalidCastException("enter a valid input time");
+
+        }
+
         /// <summary>
         /// if the imput is 00:2:30  hh:mm:ss  the result will be 2.5 minutes
         /// </summary>

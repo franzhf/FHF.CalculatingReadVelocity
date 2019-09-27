@@ -13,6 +13,7 @@ namespace CRV.CoreComponent.UnitTesting
     public class ActitityTest
     {
         [TestMethod]
+        [ExpectedException(typeof(TimeSettingsOutRangeException), "Minute is out of range")]
         public void CreateReadingActivity()
         {
             // arragment

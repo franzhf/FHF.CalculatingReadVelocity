@@ -6,13 +6,25 @@ namespace CRV.CoreComponent.UnitTesting
     [TestClass]
     public class FormatTimeUtilityTest
     {
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidCastException), "enter a valid input time")]
+        public void ConvertDateTimeToFractionMinutesInvalidInputTime()
+        {
+            // arragment
+            // act
+            // assert
+            var result = FormatTimeUtility.ConvertDateTimeToFractionMinutes("230");
+
+        }
+
         [TestMethod]
         public void ConvertDateTimeToFractionMinutes()
         {
             // arragment            
 
             // act
-            var result = FormatTimeUtility.ConvertDateTimeToFractionMinutes(DateTime.Parse("0:2:30"));
+            var result = FormatTimeUtility.ConvertDateTimeToFractionMinutes("0:2:30");
 
             // assert
             Assert.IsTrue(result == 2.5);
